@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora PRO 2000</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            margin: auto;
+        }
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form0">
+        <input type="number" required id="form1">
+        <input type="number" required id="form2">
+        <button id="form3">Clique aqui</button>
+    </form>
+
+    <script>
+        document.querySelector('#form0').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            if ((Number(document.querySelector('#form2').value))>((Number(document.querySelector('#form1').value)))) {
+                alert("Tudo certo por aqui!")
+            } else {
+                alert("Ops! Aumento o segundo número.")
+            }
+        })
+    </script>
+</body>
+</html>
